@@ -85,7 +85,7 @@ Display an image with a polygon mask to show only a specific area.
             }
           })
           .on('change', (e) => {
-            layer.updateImage({ mask: { type: e.value } })
+            layer.updateMask({ type: e.value })
           })
         maskPane
           .addInput(MASK_PARAMS, 'data', {
@@ -107,7 +107,7 @@ Display an image with a polygon mask to show only a specific area.
             }
           })
           .on('change', (e) => {
-            layer.updateMask({ mask: { data: !!e.value ? e.value : undefined } })
+            layer.updateMask({ data: !!e.value ? e.value : undefined })
           })
       })
     </script>

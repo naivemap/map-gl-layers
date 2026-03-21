@@ -1,6 +1,6 @@
 # MapLibre GL JS Custom Layers
 
-A collection of custom layer implementations for MapLibre GL JS, designed to extend its visualization capabilities.
+A collection of custom layer implementations for MapLibre GL JS, with rendering cores extracted so the same logic can be reused through engine-specific adaptors.
 
 **[Live Demos & Documentation](https://naivemap.github.io/maplibre-gl-layers/)**
 
@@ -12,8 +12,23 @@ This monorepo contains the following packages:
 
 | Package | NPM Version | License | Description |
 | --- | --- | --- | --- |
+| **`@naivemap/map-gl-layer-adaptor`** | n/a | [![license](https://img.shields.io/npm/l/@naivemap/map-gl-layer-adaptor.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | Shared adaptor contracts and helpers for MapLibre GL JS and Mapbox GL JS custom layers. |
+| **`@naivemap/echarts-layer-core`** | n/a | [![license](https://img.shields.io/npm/l/@naivemap/echarts-layer-core.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | Engine-agnostic ECharts layer runtime that can be hosted by different map adaptors. |
+| **`@naivemap/image-layer-core`** | n/a | [![license](https://img.shields.io/npm/l/@naivemap/image-layer-core.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | Engine-agnostic image layer runtime with projection warping and mask support. |
 | **`@naivemap/maplibre-gl-echarts-layer`** | [![npm](https://img.shields.io/npm/v/@naivemap/maplibre-gl-echarts-layer.svg)](https://www.npmjs.com/package/@naivemap/maplibre-gl-echarts-layer) | [![license](https://img.shields.io/npm/l/@naivemap/maplibre-gl-echarts-layer.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | Integrates Apache ECharts (`lines` and `scatter` charts) as a high-performance layer in MapLibre GL JS. |
 | **`@naivemap/maplibre-gl-image-layer`** | [![npm](https://img.shields.io/npm/v/@naivemap/maplibre-gl-image-layer.svg)](https://www.npmjs.com/package/@naivemap/maplibre-gl-image-layer) | [![license](https://img.shields.io/npm/l/@naivemap/maplibre-gl-image-layer.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | A versatile layer for displaying georeferenced images with various projections (using `proj4js`) on the map. |
+| **`@naivemap/mapbox-gl-echarts-layer`** | n/a | [![license](https://img.shields.io/npm/l/@naivemap/mapbox-gl-echarts-layer.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | Mapbox GL JS wrapper of the shared ECharts core runtime. |
+| **`@naivemap/mapbox-gl-image-layer`** | n/a | [![license](https://img.shields.io/npm/l/@naivemap/mapbox-gl-image-layer.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | Mapbox GL JS wrapper of the shared image core runtime. |
+
+## Architecture
+
+The repository now separates layer behavior into three tiers:
+
+- core packages contain rendering logic and map-agnostic state management.
+- adaptor helpers translate host engine lifecycle hooks into the core runtime contracts.
+- product packages such as `@naivemap/maplibre-gl-image-layer` stay backwards compatible and act as thin MapLibre wrappers.
+
+This makes it practical to add a Mapbox GL JS entry point without copying the rendering implementation.
 
 ## Getting Started
 
@@ -27,6 +42,12 @@ pnpm add @naivemap/maplibre-gl-echarts-layer echarts maplibre-gl
 
 # Install ImageLayer
 pnpm add @naivemap/maplibre-gl-image-layer proj4 maplibre-gl
+
+# Install Mapbox EChartsLayer
+pnpm add @naivemap/mapbox-gl-echarts-layer echarts mapbox-gl
+
+# Install Mapbox ImageLayer
+pnpm add @naivemap/mapbox-gl-image-layer proj4 mapbox-gl
 ```
 
 ### Quick Usage Example (`EChartsLayer`)

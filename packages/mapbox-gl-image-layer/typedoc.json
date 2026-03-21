@@ -1,0 +1,7 @@
+{
+  "extends": ["../../typedoc.base.json"],
+  "entryPoints": ["./src/index.ts"],
+  "name": "@naivemap/mapbox-gl-image-layer",
+  "out": "../../docs/api/mapbox-gl-image-layer",
+  "json": "../../docs/api/mapbox-gl-image-layer/api.json"
+}

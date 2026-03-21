@@ -5,7 +5,7 @@ attribute vec2 a_pos;
 
 const float PI = 3.1415926536;
 const float earthRadius = 6371008.8;
-const float earthCircumference = 2.0 * PI * earthRadius; // meters
+const float earthCircumference = 2.0 * PI * earthRadius;
 
 float circumferenceAtLatitude(float latitude) {
   return earthCircumference * cos(latitude * PI / 180.0);
@@ -30,6 +30,5 @@ vec3 mercatorfromLngLat(vec2 lnglat, float alt) {
 void main() {
   vec3 mercator = mercatorfromLngLat(a_pos, 0.0);
   gl_Position = u_matrix * vec4(mercator, 1.0);
-  // gl_Position = u_matrix * vec4(a_pos, 0.0, 1.0);
 }
 `

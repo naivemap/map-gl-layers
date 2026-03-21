@@ -1,0 +1,7 @@
+{
+  "extends": ["../../typedoc.base.json"],
+  "entryPoints": ["./src/index.ts"],
+  "name": "@naivemap/image-layer-core",
+  "out": "../../docs/api/image-layer-core",
+  "json": "../../docs/api/image-layer-core/api.json"
+}

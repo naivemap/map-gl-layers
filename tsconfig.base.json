@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "@naivemap/map-gl-layer-adaptor": ["packages/map-gl-layer-adaptor/src/index.ts"],
+      "@naivemap/echarts-layer-core": ["packages/echarts-layer-core/src/index.ts"],
+      "@naivemap/image-layer-core": ["packages/image-layer-core/src/index.ts"]
+    },
     "moduleResolution": "bundler",
     "target": "ESNext",
     "useDefineForClassFields": true,
@@ -17,6 +22,6 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "declaration": true,
-    "allowSyntheticDefaultImports": true,
-  },
+    "allowSyntheticDefaultImports": true
+  }
 }

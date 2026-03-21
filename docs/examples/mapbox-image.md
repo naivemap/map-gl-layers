@@ -1,0 +1,66 @@
+
+# Mapbox Image Layer
+
+Render a projected image layer on Mapbox GL JS with mask support from the shared core runtime.
+
+<iframe src="/maplibre-gl-layers/demos/mapbox-image.html" width="100%" style="border:none; height:400px"></iframe>
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Mapbox Image Layer</title>
+    <meta property="og:description" content="Render a projected image layer on Mapbox GL JS with mask support from the shared core runtime." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/mapbox-gl/dist/mapbox-gl.css" />
+    <script src="https://unpkg.com/mapbox-gl/dist/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/proj4"></script>
+    <script src="https://unpkg.com/@naivemap/mapbox-gl-image-layer"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <script>
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'https://www.naivemap.com/demotiles/style.json',
+        bounds: [
+          [105.29197, 32.20291],
+          [110.19401, 28.16587]
+        ],
+        fitBoundsOptions: {
+          padding: { top: 10, bottom: 10, left: 10, right: 10 }
+        }
+      })
+
+      map.on('load', () => {
+        map.addSource('chongqing', {
+          type: 'geojson',
+          data: './data/chongqing.geojson'
+        })
+
+        const layer = new ImageLayer('mapbox-image-layer', {
+          url: './images/Terrain_CQ.jpeg',
+          projection: 'EPSG:4326',
+          coordinates: [
+            [105.29197, 32.20291],
+            [110.19401, 32.20291],
+            [110.19401, 28.16587],
+            [105.29197, 28.16587]
+          ]
+        })
+        map.addLayer(layer)
+
+        map.addLayer({
+          id: 'chongqing-border',
+          type: 'line',
+          source: 'chongqing'
+        })
+      })
+    </script>
+  </body>
+</html>
+
+```

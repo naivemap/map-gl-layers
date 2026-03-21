@@ -2,6 +2,6 @@
   "extends": ["../../typedoc.base.json"],
   "entryPoints": ["./src/index.ts"],
   "name": "@naivemap/maplibre-gl-echarts-layer",
-  "out": "../../docs/api/echarts-layer",
-  "json": "../../docs/api/echarts-layer/api.json"
+  "out": "../../docs/api/maplibre-gl-echarts-layer",
+  "json": "../../docs/api/maplibre-gl-echarts-layer/api.json"
 }

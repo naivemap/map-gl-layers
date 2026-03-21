@@ -1,7 +1,7 @@
 
-# Image for maplibre-gl v4
+# Image for MapLibre GL v4
 
-Display an image with a custom projection for maplibre-gl v4.
+Display an image with a custom projection for MapLibre GL v4.
 
 <iframe src="/maplibre-gl-layers/demos/image-v4.html" width="100%" style="border:none; height:400px"></iframe>
 
@@ -9,8 +9,8 @@ Display an image with a custom projection for maplibre-gl v4.
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Image for maplibre-gl v4</title>
-    <meta property="og:description" content="Display an image with a custom projection for maplibre-gl v4." />
+    <title>Image for MapLibre GL v4</title>
+    <meta property="og:description" content="Display an image with a custom projection for MapLibre GL v4." />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />

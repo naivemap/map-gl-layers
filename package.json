@@ -1,5 +1,5 @@
 {
-  "name": "@naivemap/maplibre-gl-echarts-layer",
+  "name": "@naivemap/map-gl-layers",
   "version": "0.0.0",
   "description": "A collection of custom layer implementations for MapLibre GL JS.",
   "private": true,
@@ -24,7 +24,7 @@
     "docs:preview": "vitepress preview docs",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "changeset": "changeset",
+    "cs": "changeset",
     "release": "pnpm build && changeset publish",
     "prettier": "prettier --write ."
   },
@@ -36,6 +36,7 @@
     "concurrently": "^9.2.0",
     "echarts": "^5.6.0",
     "less": "^4.3.0",
+    "mapbox-gl": "^3.20.0",
     "maplibre-gl": "^5.6.1",
     "markdown-it-mathjax3": "^4.3.2",
     "prettier": "3.6.2",
@@ -44,7 +45,6 @@
     "typedoc-plugin-markdown": "^4.7.0",
     "typescript": "^5.8.3",
     "vite": "^7.0.0",
-    "vite-plugin-bundle-obfuscator": "^1.7.0",
     "vite-plugin-dts": "^4.5.4",
     "vitepress": "2.0.0-alpha.7",
     "vitest": "^3.2.4"

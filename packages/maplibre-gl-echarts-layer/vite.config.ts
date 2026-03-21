@@ -1,29 +1,14 @@
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { defineConfig } from 'vite'
-import vitePluginBundleObfuscator from 'vite-plugin-bundle-obfuscator'
-import dts from 'vite-plugin-dts'
+import { createViteLibConfig } from '../../config/create-vite-lib-config'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-export default defineConfig({
-  build: {
-    lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
-      name: 'EChartsLayer', // 暴露的全局变量名
-      fileName: 'index' // 输出的包文件名
-    },
-    rollupOptions: {
-      // 确保外部化处理那些你不想打包进库的依赖
-      external: ['maplibre-gl', 'echarts'],
-      output: {
-        // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
-        globals: {
-          'maplibre-gl': 'maplibregl',
-          echarts: 'echarts'
-        }
-      }
-    }
-  },
-  plugins: [dts({ insertTypesEntry: true, rollupTypes: false }), vitePluginBundleObfuscator()]
+export default createViteLibConfig({
+  entry: resolve(__dirname, 'src/index.ts'),
+  name: 'EChartsLayer',
+  external: ['maplibre-gl', '@naivemap/echarts-layer-core', '@naivemap/map-gl-layer-adaptor'],
+  globals: {
+    'maplibre-gl': 'maplibregl'
+  }
 })
