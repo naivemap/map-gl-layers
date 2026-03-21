@@ -1,6 +1,6 @@
 {
   "name": "@naivemap/mapbox-gl-echarts-layer",
-  "version": "0.3.3",
+  "version": "0.4.0-alpha.0",
   "description": "A Mapbox GL JS layer to integrate Apache ECharts' Lines and Scatter charts.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

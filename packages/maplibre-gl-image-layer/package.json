@@ -1,6 +1,6 @@
 {
   "name": "@naivemap/maplibre-gl-image-layer",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "Load a static image of any projection via Arrugator and Proj4js.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
