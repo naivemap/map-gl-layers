@@ -1,5 +1,5 @@
 {
-  "name": "@naivemap/maplibre-gl-echarts-layer",
+  "name": "@naivemap/map-gl-layers",
   "version": "0.0.0",
   "description": "A collection of custom layer implementations for MapLibre GL JS.",
   "private": true,

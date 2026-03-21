@@ -165,24 +165,12 @@ importers:
       '@naivemap/image-layer-core':
         specifier: workspace:*
         version: link:../image-layer-core
-      '@types/geojson':
-        specifier: ^7946.0.16
-        version: 7946.0.16
-      earcut:
-        specifier: ^3.0.1
-        version: 3.0.1
       maplibre-gl:
         specifier: ^4.0.0 || ^5.0.0
         version: 5.6.1
       proj4:
         specifier: ^2.8.0
         version: 2.20.4
-      tinyqueue:
-        specifier: ^3.0.0
-        version: 3.0.0
-      twgl.js:
-        specifier: ^5.5.4
-        version: 5.5.4
     devDependencies:
       '@types/proj4':
         specifier: ^2.5.2
