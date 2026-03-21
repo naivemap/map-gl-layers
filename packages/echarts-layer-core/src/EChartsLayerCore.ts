@@ -10,7 +10,7 @@ import {
   TitleComponentOption,
   TooltipComponentOption
 } from 'echarts'
-import type { LayerController, LayerMap, LngLatTuple } from '@naivemap/gl-layer-adaptor'
+import type { LayerController, LayerMap, LngLatTuple } from '@naivemap/map-gl-layer-adaptor'
 
 /**
  * the options for the EChartsLayer. It is the same as the options of ECharts, but only supports a subset of them. For more details, please refer to the ECharts documentation.

@@ -1,6 +1,6 @@
 import ImageLayerCore, { type ImageLayerOption } from '@naivemap/image-layer-core'
 import type { MaskProperty } from '@naivemap/image-layer-core'
-import { clearTileClippingMask, createMapboxLayerAdaptor, type CustomLayerLike } from '@naivemap/gl-layer-adaptor'
+import { clearTileClippingMask, createMapboxLayerAdaptor, type CustomLayerLike } from '@naivemap/map-gl-layer-adaptor'
 import type { CustomLayerInterface, Map } from 'mapbox-gl'
 
 export type { ImageLayerOption } from '@naivemap/image-layer-core'

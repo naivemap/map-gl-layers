@@ -1,5 +1,5 @@
 {
-  "name": "@naivemap/gl-layer-adaptor",
+  "name": "@naivemap/map-gl-layer-adaptor",
   "version": "0.1.0",
   "description": "Framework-agnostic adaptor primitives for MapLibre GL JS and Mapbox GL JS custom layers.",
   "main": "./dist/index.cjs",

@@ -38,7 +38,7 @@
     "proj4": "^2.8.0"
   },
   "dependencies": {
-    "@naivemap/gl-layer-adaptor": "workspace:*",
+    "@naivemap/map-gl-layer-adaptor": "workspace:*",
     "@naivemap/image-layer-core": "workspace:*"
   },
   "devDependencies": {

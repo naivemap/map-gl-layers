@@ -71,21 +71,19 @@ importers:
 
   packages/echarts-layer-core:
     dependencies:
-      '@naivemap/gl-layer-adaptor':
+      '@naivemap/map-gl-layer-adaptor':
         specifier: workspace:*
-        version: link:../gl-layer-adaptor
+        version: link:../map-gl-layer-adaptor
     devDependencies:
       echarts:
         specifier: ^5.6.0
         version: 5.6.0
 
-  packages/gl-layer-adaptor: {}
-
   packages/image-layer-core:
     dependencies:
-      '@naivemap/gl-layer-adaptor':
+      '@naivemap/map-gl-layer-adaptor':
         specifier: workspace:*
-        version: link:../gl-layer-adaptor
+        version: link:../map-gl-layer-adaptor
       '@types/geojson':
         specifier: ^7946.0.16
         version: 7946.0.16
@@ -109,14 +107,16 @@ importers:
         specifier: ^2.19.10
         version: 2.20.4
 
+  packages/map-gl-layer-adaptor: {}
+
   packages/mapbox-gl-echarts-layer:
     dependencies:
       '@naivemap/echarts-layer-core':
         specifier: workspace:*
         version: link:../echarts-layer-core
-      '@naivemap/gl-layer-adaptor':
+      '@naivemap/map-gl-layer-adaptor':
         specifier: workspace:*
-        version: link:../gl-layer-adaptor
+        version: link:../map-gl-layer-adaptor
     devDependencies:
       echarts:
         specifier: ^5.6.0
@@ -127,12 +127,12 @@ importers:
 
   packages/mapbox-gl-image-layer:
     dependencies:
-      '@naivemap/gl-layer-adaptor':
-        specifier: workspace:*
-        version: link:../gl-layer-adaptor
       '@naivemap/image-layer-core':
         specifier: workspace:*
         version: link:../image-layer-core
+      '@naivemap/map-gl-layer-adaptor':
+        specifier: workspace:*
+        version: link:../map-gl-layer-adaptor
       proj4:
         specifier: ^2.8.0
         version: 2.20.4
@@ -146,9 +146,9 @@ importers:
       '@naivemap/echarts-layer-core':
         specifier: workspace:*
         version: link:../echarts-layer-core
-      '@naivemap/gl-layer-adaptor':
+      '@naivemap/map-gl-layer-adaptor':
         specifier: workspace:*
-        version: link:../gl-layer-adaptor
+        version: link:../map-gl-layer-adaptor
     devDependencies:
       echarts:
         specifier: ^5.6.0
@@ -159,12 +159,12 @@ importers:
 
   packages/maplibre-gl-image-layer:
     dependencies:
-      '@naivemap/gl-layer-adaptor':
-        specifier: workspace:*
-        version: link:../gl-layer-adaptor
       '@naivemap/image-layer-core':
         specifier: workspace:*
         version: link:../image-layer-core
+      '@naivemap/map-gl-layer-adaptor':
+        specifier: workspace:*
+        version: link:../map-gl-layer-adaptor
       maplibre-gl:
         specifier: ^4.0.0 || ^5.0.0
         version: 5.6.1

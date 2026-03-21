@@ -35,7 +35,7 @@
     "typedocs": "typedoc"
   },
   "dependencies": {
-    "@naivemap/gl-layer-adaptor": "workspace:*",
+    "@naivemap/map-gl-layer-adaptor": "workspace:*",
     "@types/geojson": "^7946.0.16",
     "earcut": "^3.0.1",
     "tinyqueue": "^3.0.0",

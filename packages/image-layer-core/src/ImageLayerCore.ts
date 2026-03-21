@@ -1,6 +1,6 @@
 import type { BufferInfo, ProgramInfo } from 'twgl.js'
 import * as twgl from 'twgl.js'
-import type { Coordinates, LayerController, LayerMap } from '@naivemap/gl-layer-adaptor'
+import type { Coordinates, LayerController, LayerMap } from '@naivemap/map-gl-layer-adaptor'
 import type { ArrugadoFlat } from './arrugator'
 import { initArrugator } from './arrugator'
 import { earcutPolygon, extractPolygonAsync, MaskProperty } from './mask'

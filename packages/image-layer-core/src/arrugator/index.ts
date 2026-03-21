@@ -1,5 +1,5 @@
 import proj4 from 'proj4'
-import type { Coordinates } from '@naivemap/gl-layer-adaptor'
+import type { Coordinates } from '@naivemap/map-gl-layer-adaptor'
 import Arrugator from './Arrugator'
 
 export type ArrugadoFlat = {

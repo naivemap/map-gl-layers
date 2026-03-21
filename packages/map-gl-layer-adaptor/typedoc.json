@@ -1,0 +1,7 @@
+{
+  "extends": ["../../typedoc.base.json"],
+  "entryPoints": ["./src/index.ts"],
+  "name": "@naivemap/map-gl-layer-adaptor",
+  "out": "../../docs/api/map-gl-layer-adaptor",
+  "json": "../../docs/api/map-gl-layer-adaptor/api.json"
+}

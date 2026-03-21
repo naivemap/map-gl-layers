@@ -34,7 +34,7 @@
     "typedocs": "typedoc"
   },
   "dependencies": {
-    "@naivemap/gl-layer-adaptor": "workspace:*"
+    "@naivemap/map-gl-layer-adaptor": "workspace:*"
   },
   "peerDependencies": {
     "echarts": "^5.0.0"

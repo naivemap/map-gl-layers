@@ -1,5 +1,5 @@
 import EChartsLayerCore, { type ECOption } from '@naivemap/echarts-layer-core'
-import { createMapboxLayerAdaptor, type CustomLayerLike } from '@naivemap/gl-layer-adaptor'
+import { createMapboxLayerAdaptor, type CustomLayerLike } from '@naivemap/map-gl-layer-adaptor'
 import type { CustomLayerInterface, Map } from 'mapbox-gl'
 
 /**

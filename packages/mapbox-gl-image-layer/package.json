@@ -34,7 +34,7 @@
     "typedocs": "pnpm typedoc"
   },
   "dependencies": {
-    "@naivemap/gl-layer-adaptor": "workspace:*",
+    "@naivemap/map-gl-layer-adaptor": "workspace:*",
     "@naivemap/image-layer-core": "workspace:*"
   },
   "peerDependencies": {
