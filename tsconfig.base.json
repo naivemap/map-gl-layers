@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@naivemap/gl-layer-adaptor": ["packages/gl-layer-adaptor/src/index.ts"],
+      "@naivemap/map-gl-layer-adaptor": ["packages/map-gl-layer-adaptor/src/index.ts"],
       "@naivemap/echarts-layer-core": ["packages/echarts-layer-core/src/index.ts"],
       "@naivemap/image-layer-core": ["packages/image-layer-core/src/index.ts"]
     },

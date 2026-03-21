@@ -12,7 +12,7 @@ This monorepo contains the following packages:
 
 | Package | NPM Version | License | Description |
 | --- | --- | --- | --- |
-| **`@naivemap/gl-layer-adaptor`** | n/a | [![license](https://img.shields.io/npm/l/@naivemap/gl-layer-adaptor.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | Shared adaptor contracts and helpers for MapLibre GL JS and Mapbox GL JS custom layers. |
+| **`@naivemap/map-gl-layer-adaptor`** | n/a | [![license](https://img.shields.io/npm/l/@naivemap/map-gl-layer-adaptor.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | Shared adaptor contracts and helpers for MapLibre GL JS and Mapbox GL JS custom layers. |
 | **`@naivemap/echarts-layer-core`** | n/a | [![license](https://img.shields.io/npm/l/@naivemap/echarts-layer-core.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | Engine-agnostic ECharts layer runtime that can be hosted by different map adaptors. |
 | **`@naivemap/image-layer-core`** | n/a | [![license](https://img.shields.io/npm/l/@naivemap/image-layer-core.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | Engine-agnostic image layer runtime with projection warping and mask support. |
 | **`@naivemap/maplibre-gl-echarts-layer`** | [![npm](https://img.shields.io/npm/v/@naivemap/maplibre-gl-echarts-layer.svg)](https://www.npmjs.com/package/@naivemap/maplibre-gl-echarts-layer) | [![license](https://img.shields.io/npm/l/@naivemap/maplibre-gl-echarts-layer.svg)](https://github.com/naivemap/maplibre-gl-layers/blob/main/LICENSE) | Integrates Apache ECharts (`lines` and `scatter` charts) as a high-performance layer in MapLibre GL JS. |
