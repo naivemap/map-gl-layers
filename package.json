@@ -24,7 +24,7 @@
     "docs:preview": "vitepress preview docs",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "changeset": "changeset",
+    "cs": "changeset",
     "release": "pnpm build && changeset publish",
     "prettier": "prettier --write ."
   },
