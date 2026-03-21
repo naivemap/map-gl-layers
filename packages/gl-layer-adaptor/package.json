@@ -1,0 +1,37 @@
+{
+  "name": "@naivemap/gl-layer-adaptor",
+  "version": "0.1.0",
+  "description": "Framework-agnostic adaptor primitives for MapLibre GL JS and Mapbox GL JS custom layers.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "maplibre",
+    "mapbox",
+    "custom",
+    "layer",
+    "adaptor"
+  ],
+  "author": "naivemap",
+  "license": "MIT",
+  "types": "./dist/index.d.ts",
+  "repository": "https://github.com/naivemap/maplibre-gl-layers",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "vite build",
+    "typedocs": "typedoc"
+  }
+}

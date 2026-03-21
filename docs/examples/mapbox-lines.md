@@ -1,0 +1,80 @@
+
+# Mapbox Lines Chart
+
+Render animated ECharts lines on Mapbox GL JS with the shared core runtime.
+
+<iframe src="/maplibre-gl-layers/demos/mapbox-lines.html" width="100%" style="border:none; height:400px"></iframe>
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Mapbox Lines Chart</title>
+    <meta property="og:description" content="Render animated ECharts lines on Mapbox GL JS with the shared core runtime." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/mapbox-gl/dist/mapbox-gl.css" />
+    <script src="https://unpkg.com/mapbox-gl/dist/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/echarts"></script>
+    <script src="https://unpkg.com/@naivemap/mapbox-gl-echarts-layer"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <script>
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'https://www.naivemap.com/demotiles/style.json',
+        center: [106.547764, 29.565907],
+        minZoom: 1,
+        maxZoom: 7,
+        zoom: 3
+      })
+
+      map.on('load', () => {
+        const data = [
+          [116.40717, 39.90469, 106.547764, 29.565907, '北京', 52],
+          [121.47375, 31.23026, 106.547764, 29.565907, '上海', 62],
+          [114.30525, 30.59276, 106.547764, 29.565907, '武汉', 45],
+          [104.064759, 30.5702, 106.547764, 29.565907, '成都', 20],
+          [112.938861, 28.22778, 106.547764, 29.565907, '长沙', 12]
+        ]
+
+        const scatterData = []
+        const lineData = []
+        for (let i = 0; i < data.length; i++) {
+          const item = data[i]
+          scatterData.push({ name: item[4], value: [item[0], item[1], item[5]] })
+          lineData.push({ name: item[4], value: item[5], coords: [item.slice(0, 2), item.slice(2, 4)] })
+        }
+
+        const option = {
+          tooltip: {
+            trigger: 'item',
+            formatter: (param) => param.data.name + ' -> 重庆: ' + param.data.value
+          },
+          series: [
+            {
+              type: 'lines',
+              lineStyle: { width: 2, opacity: 0.5, curveness: 0.2, color: '#00F8FF' },
+              data: lineData
+            },
+            {
+              type: 'effectScatter',
+              symbolSize: 8,
+              label: { show: true, position: 'right', formatter: '{b}' },
+              itemStyle: { color: '#FF7A45' },
+              data: scatterData
+            }
+          ]
+        }
+
+        const layer = new EChartsLayer('mapbox-echarts-layer', option)
+        map.addLayer(layer)
+      })
+    </script>
+  </body>
+</html>
+
+```

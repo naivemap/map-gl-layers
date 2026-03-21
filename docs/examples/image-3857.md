@@ -41,13 +41,14 @@ Display an image with a custom projection (e.g., EPSG:3857).
         })
         const layer = new ImageLayer('image-layer', {
           url: './images/Terrain_CQ_3857.jpeg',
-          projection: 'EPSG:4326',
+          projection: 'EPSG:4326', // Use EPSG:4326 for coordinates
           coordinates: [
             [105.29197, 32.20291],
             [110.19401, 32.20291],
             [110.19401, 28.16587],
             [105.29197, 28.16587]
-          ]
+          ],
+          arrugatorStep: 0, // Set to 0 to disable arrugator
         })
         map.addLayer(layer)
         map.addLayer({

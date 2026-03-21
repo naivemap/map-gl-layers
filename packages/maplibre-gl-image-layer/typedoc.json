@@ -2,6 +2,6 @@
   "extends": ["../../typedoc.base.json"],
   "entryPoints": ["./src/index.ts"],
   "name": "@naivemap/maplibre-gl-image-layer",
-  "out": "../../docs/api/image-layer",
-  "json": "../../docs/api/image-layer/api.json"
+  "out": "../../docs/api/maplibre-gl-image-layer",
+  "json": "../../docs/api/maplibre-gl-image-layer/api.json"
 }

@@ -4,8 +4,10 @@ import { fileURLToPath } from 'node:url'
 import { ReflectionKind } from 'typedoc'
 import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
-import apiJSON1 from '../../api/echarts-layer/api.json'
-import apiJSON2 from '../../api/image-layer/api.json'
+import apiJSON1 from '../../api/maplibre-gl-echarts-layer/api.json'
+import apiJSON2 from '../../api/maplibre-gl-image-layer/api.json'
+import apiJSON3 from '../../api/mapbox-gl-echarts-layer/api.json'
+import apiJSON4 from '../../api/mapbox-gl-image-layer/api.json'
 import { pascalToKebab, singularToPlural } from './util'
 
 // https://vitepress.dev/reference/site-config
@@ -43,13 +45,23 @@ export default defineConfig({
       api: [
         {
           text: 'EChartsLayer',
-          link: '/api/echarts-layer',
-          items: sidebarApi('echarts-layer', apiJSON1)
+          link: '/api/maplibre-gl-echarts-layer',
+          items: sidebarApi('maplibre-gl-echarts-layer', apiJSON1)
         },
         {
           text: 'ImageLayer',
-          link: '/api/image-layer',
-          items: sidebarApi('image-layer', apiJSON2)
+          link: '/api/maplibre-gl-image-layer',
+          items: sidebarApi('maplibre-gl-image-layer', apiJSON2)
+        },
+        {
+          text: 'MapboxEChartsLayer',
+          link: '/api/mapbox-gl-echarts-layer',
+          items: sidebarApi('mapbox-gl-echarts-layer', apiJSON3)
+        },
+        {
+          text: 'MapboxImageLayer',
+          link: '/api/mapbox-gl-image-layer',
+          items: sidebarApi('mapbox-gl-image-layer', apiJSON4)
         }
       ],
       '/examples': [
@@ -67,7 +79,7 @@ export default defineConfig({
       }
     ],
     editLink: {
-      pattern: 'https://github.com/naivemap/maplibre-gl-layers/edit/main/docs/:path',
+      pattern: 'https://github.com/naivemap/maplibre-gl-layers/edit/main/docs/:path'
       // text: '在 GitHub 上编辑此页面'
     },
     footer: {
@@ -127,26 +139,41 @@ export default defineConfig({
   }
 })
 
+type ApiReflection = {
+  kind: number
+  name: string
+}
+
+type ApiDoc = {
+  children?: ApiReflection[]
+}
+
 /**
  * 生成 API 侧边栏
  */
-function sidebarApi(pkg: string, api: any): DefaultTheme.SidebarItem[] {
+function sidebarApi(pkg: string, api: ApiDoc): DefaultTheme.SidebarItem[] {
+  const children = Array.isArray(api?.children) ? api.children : []
+  if (children.length === 0) return []
   /**
    * 按类型分组 Kinds of reflection:
    * URL_ADDRESS   * https://typedoc.org/api/enums/Models.ReflectionKind.html
    */
-  const groups = Map.groupBy(api.children, (item) => {
-    return ReflectionKind[item.kind]
-  })
+  const groups = children.reduce((acc, item) => {
+    const key = ReflectionKind[item.kind] ?? 'Unknown'
+    if (!acc.has(key)) acc.set(key, [])
+    acc.get(key)!.push(item)
+    return acc
+  }, new Map<string, any[]>())
 
   const res: DefaultTheme.SidebarItem[] = []
   for (const [key, value] of groups) {
     const path = singularToPlural(pascalToKebab(key))
     res.push({
       text: key,
-      items: value.map((item) => {
-        return { text: item.name, link: `/api/${pkg}/${path}/${item.name}` }
-      })
+      items: value.map((item) => ({
+        text: item.name,
+        link: `/api/${pkg}/${path}/${item.name}`
+      }))
     })
   }
   return res

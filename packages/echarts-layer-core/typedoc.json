@@ -1,0 +1,7 @@
+{
+  "extends": ["../../typedoc.base.json"],
+  "entryPoints": ["./src/index.ts"],
+  "name": "@naivemap/echarts-layer-core",
+  "out": "../../docs/api/echarts-layer-core",
+  "json": "../../docs/api/echarts-layer-core/api.json"
+}

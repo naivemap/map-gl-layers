@@ -24,6 +24,12 @@ features:
   - icon: 🖼️
     title: ImageLayer
     link: ./api/image-layer 
+  - icon: 🧭
+    title: Mapbox EChartsLayer
+    link: ./api/mapbox-echarts-layer
+  - icon: 🛰️
+    title: Mapbox ImageLayer
+    link: ./api/mapbox-image-layer
   - icon: ✨
     title: One More Thing
     link: https://github.com/naivemap/maplibre-gl-layers

@@ -1,0 +1,47 @@
+{
+  "name": "@naivemap/mapbox-gl-image-layer",
+  "version": "0.1.0",
+  "description": "Load a static image of any projection via Arrugator and Proj4js for Mapbox GL JS.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "mapbox",
+    "image",
+    "layer",
+    "custom"
+  ],
+  "author": "naivemap",
+  "license": "MIT",
+  "types": "./dist/index.d.ts",
+  "repository": "https://github.com/naivemap/maplibre-gl-layers",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "vite build",
+    "typedocs": "pnpm typedoc"
+  },
+  "dependencies": {
+    "@naivemap/gl-layer-adaptor": "workspace:*",
+    "@naivemap/image-layer-core": "workspace:*"
+  },
+  "peerDependencies": {
+    "mapbox-gl": "^2.0.0 || ^3.0.0",
+    "proj4": "^2.8.0"
+  },
+  "devDependencies": {
+    "mapbox-gl": "^3.10.0"
+  }
+}
