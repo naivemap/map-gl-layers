@@ -13,10 +13,10 @@ import { pascalToKebab, singularToPlural } from './util'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-Hans-CN',
-  title: 'Custom layers',
+  title: 'Map GL layers',
   // description: '自定义图层集',
-  base: '/maplibre-gl-layers/',
-  head: [['link', { rel: 'icon', href: '/maplibre-gl-layers/logo.svg' }]],
+  base: '/map-gl-layers/',
+  head: [['link', { rel: 'icon', href: '/map-gl-layers/logo.svg' }]],
   cleanUrls: true,
   rewrites: {
     '(.*)/README.md': '(.*)/index.md'
@@ -44,12 +44,12 @@ export default defineConfig({
       // '/api': sidebarApi(),
       api: [
         {
-          text: 'EChartsLayer',
+          text: 'MapLibreEChartsLayer',
           link: '/api/maplibre-gl-echarts-layer',
           items: sidebarApi('maplibre-gl-echarts-layer', apiJSON1)
         },
         {
-          text: 'ImageLayer',
+          text: 'MapLibreImageLayer',
           link: '/api/maplibre-gl-image-layer',
           items: sidebarApi('maplibre-gl-image-layer', apiJSON2)
         },
@@ -75,11 +75,11 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/naivemap/maplibre-gl-layers'
+        link: 'https://github.com/naivemap/map-gl-layers'
       }
     ],
     editLink: {
-      pattern: 'https://github.com/naivemap/maplibre-gl-layers/edit/main/docs/:path'
+      pattern: 'https://github.com/naivemap/map-gl-layers/edit/main/docs/:path'
       // text: '在 GitHub 上编辑此页面'
     },
     footer: {

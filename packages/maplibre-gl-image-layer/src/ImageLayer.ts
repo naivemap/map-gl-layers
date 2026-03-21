@@ -3,9 +3,6 @@ import type { MaskProperty } from '@naivemap/image-layer-core'
 import { clearTileClippingMask, createMapLibreLayerAdaptor, type CustomLayerLike } from '@naivemap/gl-layer-adaptor'
 import type { CustomLayerInterface, Map } from 'maplibre-gl'
 
-/**
- * The options for the ImageLayer.
- */
 export type { ImageLayerOption } from '@naivemap/image-layer-core'
 
 /**
@@ -100,7 +97,6 @@ export default class ImageLayer implements CustomLayerInterface {
   /**
    * Updates the mask property of the image layer.
    * @param mask
-   * @returns
    */
   updateMask(mask: Partial<MaskProperty>) {
     return this.core.updateMask(mask)

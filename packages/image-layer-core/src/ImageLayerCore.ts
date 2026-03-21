@@ -9,6 +9,9 @@ import vs from './shaders/image.vertex.glsl'
 import maskfs from './shaders/mask.fragment.glsl'
 import maskvs from './shaders/mask.vertex.glsl'
 
+/**
+ * the options for ImageLayer
+ */
 export type ImageLayerOption = {
   url: string
   projection: string
