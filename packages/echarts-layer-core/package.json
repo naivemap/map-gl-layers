@@ -1,6 +1,6 @@
 {
   "name": "@naivemap/echarts-layer-core",
-  "version": "0.2.0-alpha.1",
+  "version": "0.2.0",
   "description": "Map engine agnostic ECharts custom layer core.",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",

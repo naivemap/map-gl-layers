@@ -23,6 +23,7 @@ Render a projected image layer on Mapbox GL JS with mask support from the shared
   <body>
     <div id="map"></div>
     <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiaHVhbmdsaWkiLCJhIjoiY21rMjdxbXA1MGJ4bzNmczcyZzNnNDg2diJ9.-ci9PAXkjqti8vS9zOK32w'
       const map = new mapboxgl.Map({
         container: 'map',
         style: 'https://www.naivemap.com/demotiles/style.json',

@@ -16,13 +16,14 @@ Render animated ECharts lines on Mapbox GL JS with the shared core runtime.
     <link rel="stylesheet" href="https://unpkg.com/mapbox-gl/dist/mapbox-gl.css" />
     <script src="https://unpkg.com/mapbox-gl/dist/mapbox-gl.js"></script>
     <script src="https://unpkg.com/echarts"></script>
-    <script src="https://unpkg.com/@naivemap/mapbox-gl-echarts-layer"></script>
+    <script src="https://unpkg.com/@naivemap/mapbox-gl-echarts-layer@"></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <div id="map"></div>
     <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiaHVhbmdsaWkiLCJhIjoiY21rMjdxbXA1MGJ4bzNmczcyZzNnNDg2diJ9.-ci9PAXkjqti8vS9zOK32w'
       const map = new mapboxgl.Map({
         container: 'map',
         style: 'https://www.naivemap.com/demotiles/style.json',
