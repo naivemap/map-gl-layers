@@ -8,19 +8,19 @@ This monorepo follows a three-tier architecture to maximize code reuse:
 
 ### Tier 1: Core Runtimes (Engine-agnostic)
 
-- **[@naivemap/echarts-layer-core](./api/echarts-layer-core/)** - ECharts rendering logic (lines, scatter charts) without map dependency
-- **[@naivemap/image-layer-core](./api/image-layer-core/)** - Image rendering with projection support (proj4js) without map dependency
+- **[@naivemap/echarts-layer-core](/api/echarts-layer-core/)** - ECharts rendering logic (lines, scatter charts) without map dependency
+- **[@naivemap/image-layer-core](/api/image-layer-core/)** - Image rendering with projection support (proj4js) without map dependency
 
 ### Tier 2: Adaptor Helpers
 
-- **[@naivemap/map-gl-layer-adaptor](./api/map-gl-layer-adaptor/)** - Shared primitives to bridge MapLibre GL JS and Mapbox GL JS lifecycle hooks into core runtime contracts
+- **[@naivemap/map-gl-layer-adaptor](/api/map-gl-layer-adaptor/)** - Shared primitives to bridge MapLibre GL JS and Mapbox GL JS lifecycle hooks into core runtime contracts
 
 ### Tier 3: Product Packages (Host-specific)
 
-- **[@naivemap/maplibre-gl-echarts-layer](./api/maplibre-gl-echarts-layer/)** - MapLibre GL JS wrapper
-- **[@naivemap/maplibre-gl-image-layer](./api/maplibre-gl-image-layer/)** - MapLibre GL JS wrapper
-- **[@naivemap/mapbox-gl-echarts-layer](./api/mapbox-gl-echarts-layer/)** - Mapbox GL JS wrapper
-- **[@naivemap/mapbox-gl-image-layer](./api/mapbox-gl-image-layer/)** - Mapbox GL JS wrapper
+- **[@naivemap/maplibre-gl-echarts-layer](/api/maplibre-gl-echarts-layer/)** - MapLibre GL JS wrapper
+- **[@naivemap/maplibre-gl-image-layer](/api/maplibre-gl-image-layer/)** - MapLibre GL JS wrapper
+- **[@naivemap/mapbox-gl-echarts-layer](/api/mapbox-gl-echarts-layer/)** - Mapbox GL JS wrapper
+- **[@naivemap/mapbox-gl-image-layer](/api/mapbox-gl-image-layer/)** - Mapbox GL JS wrapper
 
 ## Quick Start
 
