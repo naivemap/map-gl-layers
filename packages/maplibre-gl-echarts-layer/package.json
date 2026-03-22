@@ -2,14 +2,14 @@
   "name": "@naivemap/maplibre-gl-echarts-layer",
   "version": "0.2.0-alpha.0",
   "description": "A MapLibre GL JS layer to integrate Apache ECharts' Lines and Scatter charts.",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
   "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
     }
   },
   "files": [

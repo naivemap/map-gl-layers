@@ -3,7 +3,7 @@
 
 Display an image with a custom projection (e.g., EPSG:4326).
 
-<iframe src="/maplibre-gl-layers/demos/image.html" width="100%" style="border:none; height:400px"></iframe>
+<iframe src="/map-gl-layers/demos/image.html" width="100%" style="border:none; height:400px"></iframe>
 
 ```html
 <!doctype html>

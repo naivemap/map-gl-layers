@@ -3,7 +3,7 @@
 
 Visualize flight routes and paths with animated lines.
 
-<iframe src="/maplibre-gl-layers/demos/lines.html" width="100%" style="border:none; height:400px"></iframe>
+<iframe src="/map-gl-layers/demos/lines.html" width="100%" style="border:none; height:400px"></iframe>
 
 ```html
 <!doctype html>

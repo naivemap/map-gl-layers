@@ -3,7 +3,7 @@
 
 Render a projected image layer on Mapbox GL JS with mask support from the shared core runtime.
 
-<iframe src="/maplibre-gl-layers/demos/mapbox-image.html" width="100%" style="border:none; height:400px"></iframe>
+<iframe src="/map-gl-layers/demos/mapbox-image.html" width="100%" style="border:none; height:400px"></iframe>
 
 ```html
 <!doctype html>
@@ -16,7 +16,7 @@ Render a projected image layer on Mapbox GL JS with mask support from the shared
     <link rel="stylesheet" href="https://unpkg.com/mapbox-gl/dist/mapbox-gl.css" />
     <script src="https://unpkg.com/mapbox-gl/dist/mapbox-gl.js"></script>
     <script src="https://unpkg.com/proj4"></script>
-    <script src="https://unpkg.com/@naivemap/mapbox-gl-image-layer"></script>
+    <script src="https://app.unpkg.com/@naivemap/mapbox-gl-image-layer@0.6.0-alpha.0"></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
 

@@ -14,8 +14,7 @@ export function createViteLibConfig(options: CreateViteLibConfigOptions) {
       lib: {
         entry: options.entry,
         name: options.name,
-        formats: ['es', 'cjs'],
-        fileName: (format) => (format === 'es' ? 'index.js' : 'index.cjs')
+        fileName: (format) => `index.${format}.js`
       },
       rollupOptions: {
         external: options.external ?? [],
@@ -24,6 +23,6 @@ export function createViteLibConfig(options: CreateViteLibConfigOptions) {
         }
       }
     },
-    plugins: [dts({ insertTypesEntry: true, rollupTypes: false })]
+    plugins: [dts({ insertTypesEntry: true, rollupTypes: false, pathsToAliases: false })]
   })
 }

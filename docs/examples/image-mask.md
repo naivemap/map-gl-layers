@@ -3,7 +3,7 @@
 
 Display an image with a polygon mask to show only a specific area.
 
-<iframe src="/maplibre-gl-layers/demos/image-mask.html" width="100%" style="border:none; height:400px"></iframe>
+<iframe src="/map-gl-layers/demos/image-mask.html" width="100%" style="border:none; height:400px"></iframe>
 
 ```html
 <!doctype html>

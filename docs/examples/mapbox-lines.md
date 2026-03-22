@@ -3,7 +3,7 @@
 
 Render animated ECharts lines on Mapbox GL JS with the shared core runtime.
 
-<iframe src="/maplibre-gl-layers/demos/mapbox-lines.html" width="100%" style="border:none; height:400px"></iframe>
+<iframe src="/map-gl-layers/demos/mapbox-lines.html" width="100%" style="border:none; height:400px"></iframe>
 
 ```html
 <!doctype html>
