@@ -34,10 +34,16 @@ export default class EChartsLayer implements CustomLayerInterface {
     })
   }
 
+  /**
+   * @ignore
+   */
   onAdd(map: Map, gl: WebGLRenderingContext) {
     this._adaptor.onAdd(map, gl)
   }
 
+  /**
+   * @ignore
+   */
   onRemove(map: Map, gl: WebGLRenderingContext) {
     this._adaptor.onRemove(map, gl)
   }
@@ -56,6 +62,9 @@ export default class EChartsLayer implements CustomLayerInterface {
     this._core.setOption(option, notMerge)
   }
 
+  /**
+   * @ignore
+   */
   render(gl: WebGLRenderingContext, args: unknown) {
     this._adaptor.render(gl, args)
   }

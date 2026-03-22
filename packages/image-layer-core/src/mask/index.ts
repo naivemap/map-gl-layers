@@ -2,15 +2,15 @@ import earcut, { flatten } from 'earcut'
 import * as GeoJSON from 'geojson'
 
 /**
- * the mask property of the image layer
+ * The mask property of the image layer
  */
 export interface MaskProperty {
   /**
-   * the type of the mask, 'in' means the area inside the polygon will be masked, 'out' means the area outside the polygon will be masked, default is 'in'
+   * The type of the mask, 'in' means the area inside the polygon will be masked, 'out' means the area outside the polygon will be masked, default is 'in'
    */
   type?: 'in' | 'out'
   /**
-   * the GeoJSON data or URL of the GeoJSON data for the mask
+   * The GeoJSON data or URL of the GeoJSON data for the mask
    */
   data: GeoJSON.GeoJSON | string
 }

@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default createViteLibConfig({
   entry: resolve(__dirname, 'src/index.ts'),
   name: 'ImageLayer',
-  external: ['maplibre-gl', '@naivemap/map-gl-layer-adaptor', '@naivemap/image-layer-core'],
+  external: ['maplibre-gl'],
   globals: {
     'maplibre-gl': 'maplibregl'
   }

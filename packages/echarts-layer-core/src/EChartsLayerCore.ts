@@ -13,7 +13,7 @@ import {
 import type { LayerController, LayerMap, LngLatTuple } from '@naivemap/map-gl-layer-adaptor'
 
 /**
- * the options for the EChartsLayer. It is the same as the options of ECharts, but only supports a subset of them. For more details, please refer to the ECharts documentation.
+ * The options for the EChartsLayer. It is the same as the options of ECharts, but only supports a subset of them. For more details, please refer to the ECharts documentation.
  * @see https://echarts.apache.org/en/option.html
  */
 export type ECOption = ComposeOption<

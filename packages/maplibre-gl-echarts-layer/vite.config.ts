@@ -7,8 +7,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default createViteLibConfig({
   entry: resolve(__dirname, 'src/index.ts'),
   name: 'EChartsLayer',
-  external: ['maplibre-gl', '@naivemap/echarts-layer-core', '@naivemap/map-gl-layer-adaptor'],
+  external: ['maplibre-gl', 'echarts'],
   globals: {
-    'maplibre-gl': 'maplibregl'
+    'maplibre-gl': 'maplibregl',
+    echarts: 'echarts'
   }
 })

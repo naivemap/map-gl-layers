@@ -6,9 +6,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default createViteLibConfig({
   entry: resolve(__dirname, 'src/index.ts'),
-  name: 'MapboxEChartsLayer',
-  external: ['mapbox-gl', '@naivemap/echarts-layer-core', '@naivemap/map-gl-layer-adaptor'],
+  name: 'EChartsLayer',
+  external: ['mapbox-gl', 'echarts'],
   globals: {
-    'mapbox-gl': 'mapboxgl'
+    'mapbox-gl': 'mapboxgl',
+    echarts: 'echarts'
   }
 })

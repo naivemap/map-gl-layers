@@ -10,16 +10,42 @@ import maskfs from './shaders/mask.fragment.glsl'
 import maskvs from './shaders/mask.vertex.glsl'
 
 /**
- * the options for ImageLayer
+ * The options for ImageLayer
  */
 export type ImageLayerOption = {
+  /**
+   * The URL of the image to display on the map. The image can be in any projection, and it will be reprojected to Web Mercator using Arrugator and Proj4js.
+   */
   url: string
+  /**
+   * The projection of the image. It can be any projection supported by Proj4js, such as 'EPSG:4326' or 'EPSG:3857'.
+   */
   projection: string
+  /**
+   * The coordinates of the image corners in the specified projection.
+   */
   coordinates: Coordinates
+  /**
+   * The resampling method to use when reprojecting the image. Can be 'linear' or 'nearest'.
+   * @default 'linear'
+   */
   resampling?: 'linear' | 'nearest'
+  /**
+   * The opacity of the image layer.
+   * @default 1.0
+   */
   opacity?: number
+  /**
+   * The crossOrigin attribute for loading the image. It can be set to 'anonymous' or 'use-credentials' if the image is loaded from a different origin and CORS is enabled on the server.
+   */
   crossOrigin?: string
+  /**
+   * The step size for the Arrugator algorithm. It controls the level of detail when reprojecting the image.
+   */
   arrugatorStep?: number
+  /**
+   * The mask property for the image layer. It defines how the image should be masked.
+   */
   mask?: MaskProperty
 }
 
