@@ -11,6 +11,7 @@
     "@naivemap/maplibre-gl-image-layer": "0.1.0"
   },
   "changesets": [
+    "few-turkeys-scream",
     "slow-hands-double"
   ]
 }
