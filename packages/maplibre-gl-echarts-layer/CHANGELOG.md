@@ -1,5 +1,17 @@
 # @naivemap/maplibre-gl-echarts-layer
 
+## 0.2.0-alpha.2
+
+### Minor Changes
+
+- 8250cc9: Refactor build configs and enhance docs
+
+### Patch Changes
+
+- Updated dependencies [8250cc9]
+  - @naivemap/map-gl-layer-adaptor@0.2.0-alpha.1
+  - @naivemap/echarts-layer-core@0.2.0-alpha.1
+
 ## 0.2.0-alpha.1
 
 ### Minor Changes
