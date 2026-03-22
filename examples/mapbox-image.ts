@@ -2,7 +2,6 @@ import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import ImageLayer from '../packages/mapbox-gl-image-layer/src'
 
-
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'https://www.naivemap.com/demotiles/style.json',

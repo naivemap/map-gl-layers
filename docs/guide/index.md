@@ -2,25 +2,33 @@
 
 This repository provides custom layer implementations for both MapLibre GL JS and Mapbox GL JS.
 
-## Introduction
+## Architecture
 
-MapLibre wrappers:
+This monorepo follows a three-tier architecture to maximize code reuse:
 
-- EChartsLayer ([@naivemap/maplibre-gl-echarts-layer](https://www.npmjs.com/package/@naivemap/maplibre-gl-echarts-layer))
-- ImageLayer ([@naivemap/maplibre-gl-image-layer](https://www.npmjs.com/package/@naivemap/maplibre-gl-image-layer))
+### Tier 1: Core Runtimes (Engine-agnostic)
 
-Mapbox wrappers:
+- **[@naivemap/echarts-layer-core](./api/echarts-layer-core/)** - ECharts rendering logic (lines, scatter charts) without map dependency
+- **[@naivemap/image-layer-core](./api/image-layer-core/)** - Image rendering with projection support (proj4js) without map dependency
 
-- EChartsLayer ([@naivemap/mapbox-gl-echarts-layer](https://www.npmjs.com/package/@naivemap/mapbox-gl-echarts-layer))
-- ImageLayer ([@naivemap/mapbox-gl-image-layer](https://www.npmjs.com/package/@naivemap/mapbox-gl-image-layer))
+### Tier 2: Adaptor Helpers
 
-All four wrappers reuse the same rendering core, while exposing host-specific custom layer interfaces.
+- **[@naivemap/map-gl-layer-adaptor](./api/map-gl-layer-adaptor/)** - Shared primitives to bridge MapLibre GL JS and Mapbox GL JS lifecycle hooks into core runtime contracts
 
-## Getting Started
+### Tier 3: Product Packages (Host-specific)
 
-### [MapLibre EChartsLayer](/api/maplibre-gl-echarts-layer/)
+- **[@naivemap/maplibre-gl-echarts-layer](./api/maplibre-gl-echarts-layer/)** - MapLibre GL JS wrapper
+- **[@naivemap/maplibre-gl-image-layer](./api/maplibre-gl-image-layer/)** - MapLibre GL JS wrapper
+- **[@naivemap/mapbox-gl-echarts-layer](./api/mapbox-gl-echarts-layer/)** - Mapbox GL JS wrapper
+- **[@naivemap/mapbox-gl-image-layer](./api/mapbox-gl-image-layer/)** - Mapbox GL JS wrapper
+
+## Quick Start
+
+### [MapLibre ECharsLayer](/api/maplibre-gl-echarts-layer/)
 
 #### Install
+
+> **Note**: Most users only need to install the product packages for their map library. The core and adaptor packages are internal dependencies that are automatically bundled.
 
 ::: code-group
 
@@ -38,7 +46,7 @@ $ yarn add @naivemap/maplibre-gl-echarts-layer echarts
 
 :::
 
-### Usage
+#### Usage
 
 ```ts
 import EChartsLayer from '@naivemap/maplibre-gl-echarts-layer'
@@ -67,7 +75,7 @@ $ yarn add @naivemap/maplibre-gl-image-layer proj4
 
 :::
 
-### Usage
+#### Usage
 
 ```ts
 import ImageLayer from '@naivemap/maplibre-gl-image-layer'
@@ -96,7 +104,7 @@ $ yarn add @naivemap/mapbox-gl-echarts-layer echarts
 
 :::
 
-### Usage
+#### Usage
 
 ```ts
 import EChartsLayer from '@naivemap/mapbox-gl-echarts-layer'
@@ -125,7 +133,7 @@ $ yarn add @naivemap/mapbox-gl-image-layer proj4
 
 :::
 
-### Usage
+#### Usage
 
 ```ts
 import ImageLayer from '@naivemap/mapbox-gl-image-layer'
