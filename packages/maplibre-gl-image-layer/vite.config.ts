@@ -7,8 +7,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default createViteLibConfig({
   entry: resolve(__dirname, 'src/index.ts'),
   name: 'ImageLayer',
-  external: ['maplibre-gl'],
+  external: ['maplibre-gl', 'proj4'],
   globals: {
-    'maplibre-gl': 'maplibregl'
+    'maplibre-gl': 'maplibregl',
+    proj4: 'proj4'
   }
 })
