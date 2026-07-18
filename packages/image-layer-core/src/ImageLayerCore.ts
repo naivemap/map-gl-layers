@@ -1,6 +1,6 @@
 import type { BufferInfo, ProgramInfo } from 'twgl.js'
 import * as twgl from 'twgl.js'
-import type { Coordinates, LayerController, LayerMap } from '@naivemap/map-gl-layer-adaptor'
+import type { Coordinates, LayerController, LayerMap, LayerRenderFrame } from '@naivemap/map-gl-layer-adaptor'
 import type { ArrugadoFlat } from './arrugator'
 import { initArrugator } from './arrugator'
 import { earcutPolygon, extractPolygonAsync, MaskProperty } from './mask'
@@ -111,7 +111,7 @@ export default class ImageLayerCore implements LayerController {
     }
   }
 
-  render(frame: { gl: WebGLRenderingContext; matrix: number[] | Float32Array; prepareStencilMask?: () => void }): void {
+  render(frame: LayerRenderFrame): void {
     if (this.maskProperty.data && !this.maskBufferInfo) {
       return
     }
