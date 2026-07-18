@@ -1,5 +1,12 @@
 # @naivemap/echarts-layer-core
 
+## 0.2.1
+
+### Patch Changes
+
+- Updated dependencies [752566a]
+  - @naivemap/map-gl-layer-adaptor@0.2.1
+
 ## 0.2.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @naivemap/map-gl-layer-adaptor
 
+## 0.2.1
+
+### Patch Changes
+
+- 752566a: 支持 Float64Array 投影矩阵，修复类型检查逻辑
+
 ## 0.2.0
 
 ### Minor Changes

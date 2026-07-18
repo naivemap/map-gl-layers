@@ -1,5 +1,13 @@
 # @naivemap/image-layer-core
 
+## 0.2.1
+
+### Patch Changes
+
+- 12bebf6: 修复 render 类型定义
+- Updated dependencies [752566a]
+  - @naivemap/map-gl-layer-adaptor@0.2.1
+
 ## 0.2.0
 
 ### Minor Changes
