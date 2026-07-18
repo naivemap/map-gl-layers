@@ -1,6 +1,6 @@
 export type LngLatTuple = [number, number]
 export type Coordinates = [LngLatTuple, LngLatTuple, LngLatTuple, LngLatTuple]
-export type ProjectionMatrix = number[] | Float32Array
+export type ProjectionMatrix = number[] | Float32Array | Float64Array
 
 export interface ProjectedPoint {
   x: number
@@ -58,8 +58,8 @@ type ProjectionArgs = {
 }
 
 export function resolveLayerMatrix(args: unknown): ProjectionMatrix {
-  if (Array.isArray(args)) {
-    return args
+  if (Array.isArray(args) || args instanceof Float32Array || args instanceof Float64Array) {
+    return args as ProjectionMatrix
   }
 
   const projectionArgs = args as ProjectionArgs | undefined
